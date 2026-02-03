@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build:recipes": "tsx scripts/build-recipes.ts",
-    "build": "tsc && npm run build:recipes && vite build",
+    "build": "tsc && vite build",
+    "build:all": "npm run build:recipes && npm run build",
     "preview": "vite preview",
     "lint": "eslint",
     "format": "prettier --write ."
