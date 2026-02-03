@@ -3,6 +3,8 @@ import type { Recipe } from '../lib/recipe'
 import { escapeHtml } from '../lib/escape'
 import { marked } from 'marked'
 
+const base = import.meta.env.BASE_URL
+
 export function renderRecipePage(root: HTMLElement, recipeId: string) {
   marked.setOptions({
     gfm: true,
@@ -14,7 +16,7 @@ export function renderRecipePage(root: HTMLElement, recipeId: string) {
   if (!recipe) {
     root.innerHTML = `
       <h1>レシピが見つかりません</h1>
-      <a href="/">一覧に戻る</a>
+      <a href="${base}">一覧に戻る</a>
     `
     return
   }
@@ -46,7 +48,7 @@ export function renderRecipePage(root: HTMLElement, recipeId: string) {
       </section>
 
       <footer>
-        <a href="/">← レシピ一覧に戻る</a>
+        <a href="${base}">← レシピ一覧に戻る</a>
       </footer>
     </article>
   `

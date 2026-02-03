@@ -2,6 +2,8 @@ import recipes from '../generated/recipes.json'
 import type { Recipe } from '../lib/recipe'
 import { escapeHtml } from '../lib/escape'
 
+const base = import.meta.env.BASE_URL
+
 function filterRecipes(recipes: Recipe[], query: string): Recipe[] {
   if (!query) return recipes
 
@@ -23,7 +25,7 @@ function renderList(recipes: Recipe[]): string {
     .map(
       (r) => `
       <li class="recipe-card">
-        <a href="/recipes/${r.id}/">
+        <a href="${base}recipes/${r.id}/">
           <h2>${escapeHtml(r.title)}</h2>
           <p class="description">${escapeHtml(r.description)}</p>
           <p class="meta">
