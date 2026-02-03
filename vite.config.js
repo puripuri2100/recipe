@@ -10,11 +10,20 @@ for (const r of recipes) {
   inputs[`recipe-${r.id}`] = `./recipes/${r.id}/index.html`
 }
 
-export default defineConfig({
-  build: {
-    rollupOptions: {
-      input: inputs,
+export default defineConfig(({ mode }) => {
+  let base = '/'
+
+  // 本番環境だけ置き換え
+  if (mode == 'production') {
+    base = '/recipe/'
+  }
+
+  return {
+    build: {
+      rollupOptions: {
+        input: inputs,
+      },
     },
-  },
-  base: '/recipe/',
+    base,
+  }
 })
