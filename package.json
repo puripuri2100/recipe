@@ -1,0 +1,25 @@
+{
+  "name": "recipe",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build:recipes": "tsx scripts/build-recipes.ts",
+    "build": "tsc && npm run build:recipes && vite build",
+    "preview": "vite preview",
+    "lint": "eslint",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "eslint": "^9.39.2",
+    "prettier": "^3.8.1",
+    "tsx": "^4.21.0",
+    "typescript": "~5.9.3",
+    "vite": "^7.2.4"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "marked": "^17.0.1"
+  }
+}

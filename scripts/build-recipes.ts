@@ -1,0 +1,57 @@
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
+
+function generateHtml(id: string, title: string, description: string): string {
+  return `
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>基本のチキンカレー</title>
+
+  <!-- OGP -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="${title}" />
+  <meta property="og:description" content="${description}" />
+  <meta property="og:image" content="https://puripuri2100.github.io/recipe/ogp/curry.png" />
+  <meta property="og:url" content="https://puripuri2100.github.io/recipe/recipes/${id}/" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script type="module" src="/src/main.ts"></script>
+</head>
+<body>
+  <div id="app" data-recipe-id="${id}"></div>
+</body>
+</html>
+`
+}
+
+const dir = 'src/recipes'
+const out = 'src/generated/recipes.json'
+const recipesDir = 'recipes'
+
+const files: string[] = fs.readdirSync(dir)
+
+const recipes = []
+
+const fileRe = /(.+).md/g
+
+for (let i = 0; i < files.length; i++) {
+  const file = files[i]
+  const fileReArray = fileRe.exec(file)
+  if (fileReArray && fileReArray.length > 0) {
+    const id = fileReArray[1]
+    const raw = fs.readFileSync(path.join(dir, file), 'utf-8')
+    const { data, content } = matter(raw)
+    recipes.push({ ...data, id, body: content })
+    const html = generateHtml(id, data.title, data.description)
+    const dir2 = path.join(recipesDir, id)
+    fs.mkdirSync(dir2, { recursive: true })
+    fs.writeFileSync(path.join(dir2, 'index.html'), html)
+  }
+}
+
+fs.writeFileSync(out, JSON.stringify(recipes, null, 2))
