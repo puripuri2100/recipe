@@ -16,5 +16,5 @@ export default defineConfig({
       input: inputs,
     },
   },
-  //base: '/recipe/',
+  base: '/recipe/',
 })
