@@ -8,13 +8,13 @@ function generateHtml(id: string, title: string, description: string): string {
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <title>基本のチキンカレー</title>
+  <title>${title}</title>
 
   <!-- OGP -->
   <meta property="og:type" content="article" />
   <meta property="og:title" content="${title}" />
   <meta property="og:description" content="${description}" />
-  <meta property="og:image" content="https://puripuri2100.github.io/recipe/ogp/curry.png" />
+  <meta property="og:image" content="https://puripuri2100.github.io/recipe/ogp/${id}.png" />
   <meta property="og:url" content="https://puripuri2100.github.io/recipe/recipes/${id}/" />
 
   <!-- Twitter -->
