@@ -23,13 +23,11 @@ export function renderRecipePage(root: HTMLElement, recipeId: string) {
 
   root.innerHTML = `
     <article class="recipe">
-      <header>
-        <h1>${escapeHtml(recipe.title)}</h1>
-        <p class="description">${escapeHtml(recipe.description)}</p>
-        <p class="meta">
-          ⏱ ${recipe.cookTimeMinutes}分
-        </p>
-      </header>
+      <h1>${escapeHtml(recipe.title)}</h1>
+      <p class="description">${escapeHtml(recipe.description)}</p>
+      <p class="meta">
+        ⏱ ${recipe.cookTimeMinutes}分
+      </p>
 
       <section>
         <h2>材料</h2>

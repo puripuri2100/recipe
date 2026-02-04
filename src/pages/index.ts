@@ -43,20 +43,18 @@ export function renderIndexPage(root: HTMLElement) {
   const data = recipes as Recipe[]
 
   root.innerHTML = `
-    <section class="index">
-      <header>
-        <h1>レシピ一覧</h1>
-        <input
-          type="search"
-          id="search"
-          placeholder="レシピ名・材料・タグで検索"
-        />
-      </header>
+    <article class="index">
+      <h1 class="">レシピ帳</h1>
+      <input
+        type="search"
+        id="search"
+        placeholder="レシピ名・材料・タグで検索"
+      />
 
       <ul id="recipe-list" class="recipe-list">
         ${renderList(data)}
       </ul>
-    </section>
+    </article>
   `
 
   const input = root.querySelector<HTMLInputElement>('#search')!

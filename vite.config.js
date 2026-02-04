@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
 import recipes from './src/generated/recipes.json'
 
 const inputs = {
@@ -25,5 +26,6 @@ export default defineConfig(({ mode }) => {
       },
     },
     base,
+    plugins: [tailwindcss()],
   }
 })

@@ -1,4 +1,5 @@
-import './style.css'
+import './main.css'
+
 import { renderRecipePage } from './pages/recipe'
 import { renderIndexPage } from './pages/index'
 import { renderNotFoundPage } from './pages/notFound'
