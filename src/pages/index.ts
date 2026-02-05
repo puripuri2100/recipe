@@ -49,7 +49,7 @@ function renderList(recipes: Recipe[]): string {
       const i = Object.keys(r.ingredients).slice(0, 2).join('，')
       return `
       <li class="recipe-card">
-        <a href="${base}recipes/${r.id}/" class="block h-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-50 transition-all duration-300">
+        <a href="${base}r/${r.id}/" class="block h-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-50 transition-all duration-300">
           <h2 class="mb-2 font-bold">${escapeHtml(r.title)}</h2>
           <p>所要時間：${r.cookTimeMinutes}分</p>
           <p>主な材料：${i}</p>

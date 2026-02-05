@@ -16,7 +16,7 @@ export function renderRecipePage(root: HTMLElement, recipeId: string) {
   if (!recipe) {
     root.innerHTML = `
       <h1>レシピが見つかりません</h1>
-      <a href="${base}">一覧に戻る</a>
+      <a href="${base}">← 一覧に戻る</a>
     `
     return
   }
