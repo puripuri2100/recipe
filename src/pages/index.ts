@@ -49,7 +49,7 @@ function renderList(recipes: Recipe[]): string {
       const i = Object.keys(r.ingredients).slice(0, 2).join('，')
       return `
       <li class="recipe-card">
-        <a href="${base}recipes/${r.id}/" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-50 transition-all duration-300 group no-underline">
+        <a href="${base}recipes/${r.id}/" class="block h-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-50 transition-all duration-300">
           <h2 class="mb-2 font-bold">${escapeHtml(r.title)}</h2>
           <p>所要時間：${r.cookTimeMinutes}分</p>
           <p>主な材料：${i}</p>
@@ -127,7 +127,7 @@ export function renderIndexPage(root: HTMLElement) {
             </fieldset>
           </div>
 
-          <ul id="recipe-list" class="recipe-list">
+          <ul id="recipe-list" class="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
             ${renderList(data)}
           </ul>
         </article>
