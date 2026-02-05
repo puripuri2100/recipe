@@ -8,7 +8,7 @@ const inputs = {
 }
 
 for (const r of recipes) {
-  inputs[`recipe-${r.id}`] = `./recipes/${r.id}/index.html`
+  inputs[`recipe-${r.id}`] = `./r/${r.id}/index.html`
 }
 
 export default defineConfig(({ mode }) => {

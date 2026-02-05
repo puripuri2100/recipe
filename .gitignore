@@ -23,7 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 
-recipes/*
-!recipes/.gitkeep
+r/*
+!r/.gitkeep
 src/generated/*
 !src/generated/.gitkeep

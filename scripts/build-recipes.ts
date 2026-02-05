@@ -16,7 +16,7 @@ function generateHtml(id: string, title: string, description: string): string {
   <meta property="og:title" content="${title}" />
   <meta property="og:description" content="${description}" />
   <meta property="og:image" content="https://puripuri2100.github.io/recipe/ogp/${id}.png" />
-  <meta property="og:url" content="https://puripuri2100.github.io/recipe/recipes/${id}/" />
+  <meta property="og:url" content="https://puripuri2100.github.io/recipe/r/${id}/" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -32,7 +32,7 @@ function generateHtml(id: string, title: string, description: string): string {
 
 const dir = 'src/recipes'
 const out = 'src/generated/recipes.json'
-const recipesDir = 'recipes'
+const recipesDir = 'r'
 
 const files: string[] = fs.readdirSync(dir)
 
