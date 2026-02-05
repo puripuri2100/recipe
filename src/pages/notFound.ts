@@ -25,14 +25,7 @@ export function renderNotFoundPage(root: HTMLElement) {
             href="${base}"
             class="inline-flex justify-center rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-300"
           >
-            トップページへ戻る
-          </a>
-
-          <a
-            href="/"
-            class="text-sm text-gray-500 hover:text-gray-700 underline-offset-4 hover:underline"
-          >
-            レシピ一覧を見る
+            ← トップページへ戻る
           </a>
         </div>
       </main>
