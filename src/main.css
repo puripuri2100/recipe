@@ -8,3 +8,16 @@ a {
   @apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600
 }
   */
+
+.steps {
+  & h3 {
+    @apply text-lg mb-2 mt-5 font-bold;
+  }
+  & h4 {
+    @apply text-sm mb-2 mt-4 font-bold;
+  }
+
+  & p {
+    @apply font-serif;
+  }
+}
