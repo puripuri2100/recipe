@@ -86,7 +86,7 @@ export function renderIndexPage(root: HTMLElement) {
               </div>
             </div>
             <div>
-              <a href="https://github.com/puripuri2100/recipe"><img class="w-7 h-7 object-scale-down mr-1 translate-y-1" src="/GitHub_Invertocat_Black_Clearspace.png"/></a>
+              <a href="https://github.com/puripuri2100/recipe"><img class="w-7 h-7 object-scale-down mr-1 translate-y-1" src="${base}GitHub_Invertocat_Black_Clearspace.png" alt="GitHub repository link"/></a>
             </div>
           </div>
           <hr class="mt-2"/>
