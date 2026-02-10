@@ -28,5 +28,4 @@
 このコード及びレシピはCC0-1.0ライセンスで配布されます。
 著作権に関するあらゆる権利を放棄しており、誰でもいつでも自由に利用し加工し再配布することができます。
 
-
-[![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png "CC0")](http://creativecommons.org/publicdomain/zero/1.0/deed.ja)
+[![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png 'CC0')](http://creativecommons.org/publicdomain/zero/1.0/deed.ja)
