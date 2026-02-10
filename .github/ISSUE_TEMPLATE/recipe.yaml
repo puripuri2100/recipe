@@ -1,6 +1,6 @@
 name: New recipe
 description: 新しいレシピの提案
-title: ""
+title: "[New]: "
 labels: ["New recipe"]
 body:
   - type: input
