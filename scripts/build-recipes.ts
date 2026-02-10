@@ -38,11 +38,11 @@ const files: string[] = fs.readdirSync(dir)
 
 const recipes = []
 
-const fileRe = /(.+).md/g
+const fileRe = /(.+).md/
 
 for (let i = 0; i < files.length; i++) {
   const file = files[i]
-  const fileReArray = fileRe.exec(file)
+  const fileReArray = fileRe.exec(file.trim())
   if (fileReArray && fileReArray.length > 0) {
     const id = fileReArray[1]
     const raw = fs.readFileSync(path.join(dir, file), 'utf-8')
