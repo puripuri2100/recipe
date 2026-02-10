@@ -78,10 +78,15 @@ export function renderIndexPage(root: HTMLElement) {
     <div class="flex flex-row justify-center">
       <div class="flex-col w-full lg:max-w-250">
         <article class="mt-5 mx-5 my-10">
-          <div class="flex items-end">
-            <h1 class="text-2xl font-sans">レシピ帳</h1>
-            <div class="ml-3">
-              <p class="text-sm text-gray-500">自分だけのレシピサイト</p>
+          <div class="flex items-end justify-between">
+            <div class="flex items-end">
+              <h1 class="text-2xl font-sans">レシピ帳</h1>
+              <div class="ml-3">
+                <p class="text-sm text-gray-500">自分だけのレシピサイト</p>
+              </div>
+            </div>
+            <div>
+              <a href="https://github.com/puripuri2100/recipe"><img class="w-7 h-7 object-scale-down mr-1 translate-y-1" src="/GitHub_Invertocat_Black_Clearspace.png"/></a>
             </div>
           </div>
           <hr class="mt-2"/>
