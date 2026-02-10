@@ -36,7 +36,7 @@ export function renderRecipePage(root: HTMLElement, recipeId: string) {
           <p class="font-serif text-md mt-4">${escapeHtml(recipe.description)}</p>
 
           <section>
-            <h2 class="font-serif text-xl mt-7">材料（${recipe.numbers}食分）</h2>
+            <h2 class="font-serif text-xl mt-7">材料${recipe.numbers ? `（${recipe.numbers}食分）` : ""}</h2>
             <hr class="mt-1 mb-3" />
             <ul class="ml-1">
               ${Object.entries(recipe.ingredients)

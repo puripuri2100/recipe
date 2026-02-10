@@ -29,7 +29,7 @@ export interface Recipe {
   id: string
   title: string
   description: string
-  numbers: number
+  numbers?: number
   ingredients: Ingredients
   cookTimeMinutes: number
   season: Season
