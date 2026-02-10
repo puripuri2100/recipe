@@ -21,7 +21,7 @@ export interface Typ {
 }
 
 export interface Ingredients {
-  [ingredientName: string]: string
+  [ingredientName: string]: string | number
 }
 
 // レシピ情報
