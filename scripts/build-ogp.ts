@@ -132,24 +132,39 @@ for (let i = 0; i < r.length; i++) {
                   type: 'div',
                   props: {
                     style: {
-                      marginLeft: '5px',
-                      marginTop: '80px',
+                      position: 'absolute',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      left: '60px',
+                      top: '520px',
                       fontSize: '20px',
                       fontFamily: 'BIZ UDMincho',
                     },
-                    children: `主な材料：${Object.keys(recipe.ingredients).slice(0, 2).join('，')}`,
-                  },
-                },
-                {
-                  type: 'div',
-                  props: {
-                    style: {
-                      marginLeft: '5px',
-                      marginTop: '8px',
-                      fontSize: '20px',
-                      fontFamily: 'BIZ UDMincho Bold',
-                    },
-                    children: `調理時間：${recipe.cookTimeMinutes}分`,
+                    children: [
+                      {
+                        type: 'div',
+                        props: {
+                          style: {
+                            marginLeft: '5px',
+                            fontSize: '20px',
+                            fontFamily: 'BIZ UDMincho',
+                          },
+                          children: `主な材料：${Object.keys(recipe.ingredients).slice(0, 2).join('，')}`,
+                        },
+                      },
+                      {
+                        type: 'div',
+                        props: {
+                          style: {
+                            marginLeft: '5px',
+                            marginTop: '8px',
+                            fontSize: '20px',
+                            fontFamily: 'BIZ UDMincho Bold',
+                          },
+                          children: `調理時間：${recipe.cookTimeMinutes}分`,
+                        },
+                      },
+                    ],
                   },
                 },
               ],
