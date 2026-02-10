@@ -44,6 +44,13 @@ body:
     attributes:
       label: 料理について何かしらのメモが必要なら書く
   - type: textarea
+    id: ingredients
+    attributes:
+      label: 材料
+      description: 材料名と分量を記述してください．
+    validations:
+      required: true
+  - type: textarea
     id: recipe
     attributes:
       label: 作成手順
