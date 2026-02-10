@@ -36,6 +36,7 @@ for (let i = 0; i < r.length; i++) {
           display: 'flex',
           flexDirection: 'column',
           paddingLeft: '285px',
+          background: 'white',
         },
         children: [
           {
