@@ -191,3 +191,86 @@ for (let i = 0; i < r.length; i++) {
 
   await sharp(Buffer.from(svg)).png().toFile(`public/ogp/${recipe.id}.png`)
 }
+
+// トップページ
+const svg = await satori(
+  {
+    type: 'div',
+    props: {
+      style: {
+        width: '1200px',
+        height: '630px',
+        display: 'flex',
+        flexDirection: 'column',
+        paddingLeft: '285px',
+        background: 'white',
+      },
+      children: [
+        {
+          type: 'div',
+          props: {
+            style: {
+              display: 'flex',
+              flexDirection: 'column',
+              width: '630px',
+              height: '630px',
+              color: 'black',
+              paddingLeft: '60px',
+              paddingRight: '60px',
+              paddingTop: '60px',
+              fontFamily: 'BIZ UDMincho',
+            },
+            children: [
+              {
+                type: 'div',
+                props: {
+                  style: {
+                    marginTop: '300px',
+                    fontSize: '60px',
+                  },
+                  children: 'レシピ帳',
+                },
+              },
+              {
+                type: 'hr',
+                props: {
+                  style: {
+                    width: '510px',
+                    border: '0.5px #333333',
+                  },
+                },
+              },
+              {
+                type: 'div',
+                props: {
+                  style: {
+                    marginTop: '10px',
+                    marginLeft: '5px',
+                    fontSize: '25px',
+                  },
+                  children: '自分だけのレシピサイト',
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  {
+    width: 1200,
+    height: 630,
+    fonts: [
+      {
+        name: 'BIZ UDMincho',
+        data: fontMinchoRegularBuffer,
+      },
+      {
+        name: 'BIZ UDMincho Bold',
+        data: fontMinchoBoldBuffer,
+      },
+    ],
+  }
+)
+
+await sharp(Buffer.from(svg)).png().toFile(`public/ogp/index.png`)
