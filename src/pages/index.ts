@@ -40,11 +40,22 @@ const typeMap = {
   type_other: 'その他',
 } satisfies Record<string, keyof Typ>
 
+// ランダムで並び替える
+function shuffleArray<T>(array: T[]): T[] {
+  const newArray = [...array] // 元の配列を破壊しない場合
+  for (let i = newArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[newArray[i], newArray[j]] = [newArray[j], newArray[i]]
+  }
+  return newArray
+}
+
 function renderList(recipes: Recipe[]): string {
   if (recipes.length === 0) {
     return `<li class="empty">該当するレシピがありません</li>`
   }
-  return recipes
+  const random = shuffleArray(recipes)
+  return random
     .map((r) => {
       const i = Object.keys(r.ingredients).slice(0, 2).join('，')
       return `
