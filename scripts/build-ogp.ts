@@ -105,7 +105,7 @@ for (let i = 0; i < r.length; i++) {
                         type: 'div',
                         props: {
                           style: {
-                            marginTop: '60px',
+                            marginTop: '20px',
                             fontSize: '60px',
                             lineHeight: 1.2,
                           },
@@ -116,7 +116,8 @@ for (let i = 0; i < r.length; i++) {
                         type: 'div',
                         props: {
                           style: {
-                            marginTop: '20px',
+                            marginLeft: "5px",
+                            marginTop: '30px',
                             fontSize: '20px',
                             lineHeight: 1.2,
                           },
@@ -130,7 +131,8 @@ for (let i = 0; i < r.length; i++) {
                   type: 'div',
                   props: {
                     style: {
-                      marginTop: "40px",
+                      marginLeft: "5px",
+                      marginTop: "80px",
                       fontSize: '20px',
                       fontFamily: 'BIZ UDMincho',
                     },
@@ -141,7 +143,8 @@ for (let i = 0; i < r.length; i++) {
                   type: 'div',
                   props: {
                     style: {
-                      marginTop: "5px",
+                      marginLeft: "5px",
+                      marginTop: "8px",
                       fontSize: '20px',
                       fontFamily: 'BIZ UDMincho Bold',
                     },

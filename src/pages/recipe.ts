@@ -30,9 +30,9 @@ export function renderRecipePage(root: HTMLElement, recipeId: string) {
         <article class="recipe mx-5 mt-10 mb-5">
           <div class="flex items-end justify-between">
             <h1 class="text-3xl font-serif">${escapeHtml(recipe.title)}</h1>
-          ${recipe.tags.length == 0 ? '' : `<p class="my-5">${recipe.tags.join('，')}</p>`}
             <p class="ml-5 font-bold text-sm mt-5">調理時間：${recipe.cookTimeMinutes}分</p>
           </div>
+          ${recipe.tags.length == 0 ? '' : `<p class="text-sm mb-2 mt-1 font-sans">${recipe.tags.join('，')}</p>`}
           <p class="font-serif text-md mt-4">${escapeHtml(recipe.description)}</p>
 
           <section>
