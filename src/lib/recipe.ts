@@ -20,9 +20,7 @@ export interface Typ {
   その他?: boolean
 }
 
-export interface Ingredients {
-  [ingredientName: string]: string | number
-}
+export type Ingredients = Record<string, string | number | undefined>
 
 // レシピ情報
 export interface Recipe {
