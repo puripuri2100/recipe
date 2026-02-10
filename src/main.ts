@@ -10,7 +10,6 @@ function main() {
 
   const recipeId = app.dataset.recipeId
   const page = app.dataset.page
-  console.log(page)
 
   if (page == '404') {
     renderNotFoundPage(app)

@@ -1,5 +1,5 @@
 blank_issues_enabled: true
 defaults:
-  - template: "recipe.yaml"
-    name: "新しいレシピ"
-    about: "新しいレシピを提案する"
+  - template: 'recipe.yaml'
+    name: '新しいレシピ'
+    about: '新しいレシピを提案する'

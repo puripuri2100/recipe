@@ -27,3 +27,5 @@ r/*
 !r/.gitkeep
 src/generated/*
 !src/generated/.gitkeep
+public/ogp/*.png
+.env

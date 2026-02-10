@@ -1,7 +1,7 @@
 name: New recipe
 description: 新しいレシピの提案
-title: "[New]: "
-labels: ["New recipe"]
+title: '[New]: '
+labels: ['New recipe']
 body:
   - type: input
     id: description
@@ -38,7 +38,7 @@ body:
     id: tags
     attributes:
       label: タグ情報(Option)
-      placeholder: "ヘルシー, さっぱり"
+      placeholder: 'ヘルシー, さっぱり'
   - type: input
     id: memo
     attributes:
