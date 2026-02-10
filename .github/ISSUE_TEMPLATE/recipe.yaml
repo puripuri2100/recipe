@@ -1,0 +1,52 @@
+name: New recipe
+description: 新しいレシピの提案
+title: ""
+labels: ["New recipe"]
+body:
+  - type: input
+    id: description
+    attributes:
+      label: レシピの詳細
+    validations:
+      required: true
+  - type: checkboxes
+    id: season
+    attributes:
+      label: 対応する季節（複数可）．
+      options:
+        - label: 春
+        - label: 夏
+        - label: 秋
+        - label: 冬
+        - label: 正月
+  - type: checkboxes
+    id: typ
+    attributes:
+      label: 料理の種類（複数可）．
+      options:
+        - label: 肉
+        - label: 魚
+        - label: 主菜
+        - label: 副菜
+        - label: 主食
+        - label: 汁物
+        - label: おつまみ
+        - label: お菓子
+        - label: 弁当用
+        - label: その他
+  - type: input
+    id: tags
+    attributes:
+      label: タグ情報(Option)
+      placeholder: "ヘルシー, さっぱり"
+  - type: input
+    id: memo
+    attributes:
+      label: 料理について何かしらのメモが必要なら書く
+  - type: textarea
+    id: recipe
+    attributes:
+      label: 作成手順
+      description: Markdownで作成手順を記述してください．
+    validations:
+      required: true
