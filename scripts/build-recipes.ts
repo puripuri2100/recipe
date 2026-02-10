@@ -2,7 +2,6 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
-const base = import.meta.env.BASE_URL
 
 function generateHtml(id: string, title: string, description: string): string {
   return `
@@ -17,8 +16,8 @@ function generateHtml(id: string, title: string, description: string): string {
   <meta property="og:type" content="article" />
   <meta property="og:title" content="${title}" />
   <meta property="og:description" content="${description}" />
-  <meta property="og:image" content="${base}ogp/${id}.png" />
-  <meta property="og:url" content="${base}r/${id}/" />
+  <meta property="og:image" content="/recipe/ogp/${id}.png" />
+  <meta property="og:url" content="/recipe/r/${id}/" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
