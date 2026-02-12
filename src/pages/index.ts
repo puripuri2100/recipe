@@ -168,6 +168,8 @@ export function renderIndexPage(root: HTMLElement) {
     list.innerHTML = renderList(filtered)
   }
 
+  update()
+
   input.addEventListener('input', update)
   checkboxes.forEach((cb) => cb.addEventListener('change', update))
 }
