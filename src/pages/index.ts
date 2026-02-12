@@ -54,8 +54,7 @@ function renderList(recipes: Recipe[]): string {
   if (recipes.length === 0) {
     return `<li class="empty">該当するレシピがありません</li>`
   }
-  const random = shuffleArray(recipes)
-  return random
+  return recipes
     .map((r) => {
       const i = Object.keys(r.ingredients).slice(0, 2).join('，')
       return `
@@ -156,6 +155,8 @@ export function renderIndexPage(root: HTMLElement) {
 
   const checkboxes = root.querySelectorAll<HTMLInputElement>('input[type="checkbox"]')
 
+  const randomRecipes = shuffleArray(data)
+
   function update() {
     const cond: FilterCondition = {
       query: input.value.trim().toLowerCase(),
@@ -163,7 +164,7 @@ export function renderIndexPage(root: HTMLElement) {
       types: getCheckedValues(root, '[id^="type_"]', typeMap),
     }
 
-    const filtered = filterRecipes(data, cond)
+    const filtered = filterRecipes(randomRecipes, cond)
     list.innerHTML = renderList(filtered)
   }
 

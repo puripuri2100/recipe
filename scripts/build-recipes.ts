@@ -2,7 +2,6 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
-
 function generateHtml(id: string, title: string, description: string): string {
   return `
 <!doctype html>
